@@ -43,7 +43,15 @@ def find_max_score(scores):
             max_score = scores[index]
             max_index = index
 
-    return max_score, max_index
+    return max_score, 
+
+def calculate_average_score(scores):
+    """Calculate the average MVP score."""
+
+    if len(scores) == 0:
+        return 0
+
+    return sum(scores) / len(scores)
 
 
 def abbreviate_name(full_name):
