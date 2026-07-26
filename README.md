@@ -1,2 +1,2 @@
 # Basketball_MVP
-Project status: Average-score feature is ready
+Project status: MVP calculator is ready
