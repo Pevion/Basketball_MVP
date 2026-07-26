@@ -1,2 +1,2 @@
 # Basketball_MVP
-learning how to code first project
+Project status: Average-score feature is ready
