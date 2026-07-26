@@ -45,6 +45,13 @@ def find_max_score(scores):
 
     return max_score, max_index
 
+def calculate_average_score(scores):
+    """Calculate the average MVP score."""
+
+    if len(scores) == 0:
+        return 0
+
+    return sum(scores) / len(scores)
 
 def abbreviate_name(full_name):
     """Create an abbreviation from the player's full name."""
@@ -82,9 +89,12 @@ for player in all_players:
     print(f"{player[4]} MVP Score: {result:.1f}")
 
 
+
+# Calculate the average MVP score
+average_score = calculate_average_score(all_mvp_scores)
+
 # Find the highest MVP score
 highest_score, mvp_index = find_max_score(all_mvp_scores)
-
 
 # Find the player who owns the highest score
 mvp_player = all_players[mvp_index]
@@ -93,14 +103,13 @@ mvp_name = mvp_player[4]
 mvp_team = mvp_player[2]
 mvp_abbreviation = abbreviate_name(mvp_name)
 
-
 # Print all results
 print("\nAll MVP Scores:")
 print(all_mvp_scores)
+print(f"Average MVP Score: {average_score:.1f}")
 
 print("\n========== MATCH MVP ==========")
 print("MVP Name:", mvp_name)
 print("MVP Abbreviation:", mvp_abbreviation)
 print("MVP Team:", mvp_team)
 print(f"MVP Score: {highest_score:.1f}")
-
